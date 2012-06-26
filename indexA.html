@@ -1,0 +1,531 @@
+	<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Login & Password Saver</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport --!>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" />  
+	<link rel="stylesheet" href="css/style.css"/>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+
+</head>
+
+<body>
+
+	<div data-role="page"  id="home" >
+		
+		<img src="images/Brandinglogo.png" width="215" height="30" />
+			
+		<p>An application that stores all of your login and password information.</p>
+		
+<style>			
+  .ui-page {background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#FFC180));
+			}
+</style>
+
+		<div data-role="content">
+			
+			
+				<a href= "#addItem"><img src="images/lock1.png" alt="Password Icon" width="190" height="190" /></a> 
+			<br>
+			<br>
+			<ul data-role="listview" data-inset="true" data-theme="b" data-filter="true">		
+				<li><a href="#cpulogins">Computer Logins</a></li>
+				<li><a href="#email">Email Accounts</a></li>
+				<li><a href="#financial">Finacial Information</a></li>
+				<li><a href="#onlineshopping">Online Shopping</a></li>
+				<li><a href="#personal">Personal Information</a></li>
+				<li><a href="#other">Other</a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-theme="b" >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+					<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+					<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>	
+
+
+	<div data-role="page" id="cpulogins">
+		<img src="images/Brandinglogo.png" width="215" height="30" />	
+		<div data-role="header" data-theme="b" >
+			<p>Computer Login Entries</p>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview">
+				
+				<li>
+					<a href="#comingsoon">
+						<img src="images/Computer_Logins.png" />
+						<h3>Apple ID</h3>
+						<p>My Login Information for my Apple ID</p>
+					</a>
+					<li>
+						<a href="#comingsoon">
+						<img src="images/Computer_Logins.png" />
+						<h3>Macbook Pro Login</h3>
+						<p>My Login Information for my Macbook Pro</p>
+					</a>
+				</li>
+				</li>
+			</ul>	
+		</div>
+	<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+					<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+					<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>	
+	<div data-role="page" id="email">
+			<img src="images/Brandinglogo.png" width="215" height="30" />	
+			<div data-role="header" data-theme="b" >
+				<p>Email Accounts</p>
+			</div>
+	
+			<div data-role="content">
+				<ul data-role="listview">
+					
+					<li>
+						<a href="#comingsoon">
+							<img src="images/Email.png" />
+							<h3>Gmail Account</h3>
+							<p>My Login Information for my Gmail account.</p>
+						</a>
+					</li>
+				</ul>	
+			</div>
+		
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+					<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+					<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>	
+	<div data-role="page" id="financial">
+		<img src="images/Brandinglogo.png" width="215" height="30" />	
+		<div data-role="header" data-theme="b" >
+			<p>Financial Information</p>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview">
+				
+				<li>
+					<a href="#comingsoon">
+						<img src="images/Financial.png" />
+						<h3>TurboTax info.</h3>
+						<p>My Login Information for my tax returns</p>
+					</a>
+				</li>
+			</ul>	
+		</div>
+	
+	<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+					<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+					<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+	
+	<div data-role="page" id="onlineshopping">
+		<img src="images/Brandinglogo.png" width="215" height="30" />	
+		<div data-role="header" data-theme="b" >
+			<p>Online Shopping</p>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview">
+				
+				<li>
+					<a href="#comingsoon">
+						<img src="images/Online_Shopping.png" />
+						<h3>Ebay Account</h3>
+						<p>My Login Information for my Ebay account</p>
+					</a>
+				</li>
+			</ul>	
+		</div>
+	<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+					<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+					<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>	
+	<div data-role="page" id="personal">
+		<img src="images/Brandinglogo.png" width="215" height="30" />	
+		<div data-role="header" data-theme="b" >
+			<p>Personal Data</p>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview">
+				
+				<li>
+					<a href="#comingsoon">
+						<img src="images/Personal.png" />
+						<h3>Personal Data</h3>
+						<p>My Personal Information.</p>
+					</a>
+				</li>
+			</ul>	
+		</div>
+	
+	<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+					<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+					<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>	
+	
+	<div data-role="page" id="other">
+		<img src="images/Brandinglogo.png" width="215" height="30" />	
+		<div data-role="header" data-theme="b" >
+			<p>Other Information</p>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview">
+				
+				<li>
+					<a href="#comingsoon">
+						<img src="images/Other.png" />
+						<h3>Other information</h3>
+						<p>My other information.</p>
+					</a>
+				</li>
+			</ul>	
+		</div>
+	</div>
+	<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+					<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+					<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>	
+	<div data-role="page" id="comingsoon">	
+		<img src="images/Brandinglogo.png" width="215" height="30" />	
+		<div data-role="header" data-theme="b" >		
+			<p>Coming Soon</p>			
+			
+		</div>
+
+		<div data-role="content">
+			<br>
+			
+			<img src="images/comingsoonlogo.png" width="200" height="200" />	
+		
+		
+		</div>
+				<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+					<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+					<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div>	
+	
+	
+	<div data-role="page" id="display">
+		<img src="images/Brandinglogo.png" width="215" height="30" />	
+	<div data-role="header" data-theme="b" >
+				<p>Email Account</p>
+			</div>
+	<div data-role="content">
+				<ul data-role="listview">
+					<li>
+			<img src="images-a/Email.png" />
+			<h2>Fullsail Email Account</h2></li>
+		<li data-role="list-divider">Login:</li>
+			<li><h6>tonyb@fullsail.com</h6></li>
+		<li data-role="list-divider">Password:</li>
+			<li><h6>tbfso1</h6></li>
+		<li data-role="list-divider">Sort By:</li>
+			<li><h6>Title</h6></li>
+		<li data-role="list-divider">Usage:</li>
+			<li><h6>2</h6></li>
+		<li data-role="list-divider">Date Modified:</li>
+			<li><h6>3/14/2012</h6></li>
+		<li data-role="list-divider">Notes:</li>
+			<li><h6>miu project 3</h6></li>
+			
+			</div>
+		</div>
+	
+	
+	
+	
+	
+	<div data-role="page" id="news">
+			<img src="images/Brandinglogo.png" width="215" height="30" />	
+			<div data-role="header" data-theme="b" >
+				<h2>News Stream</h2>
+			</div>
+	
+			<div data-role="content">
+				<ul data-role="listview">
+					<li>
+						<a href="#comingsoon">
+							<img src="images/Email.png" />
+							<h3>Gmail Account</h3>
+							<h6>My Login Information for my Gmail account.</h6>
+							<p>Added 2 hours ago</p>
+					</a>
+				</li>
+					</ul>
+				<ul data-role="listview">
+					<li>
+					<a href="#comingsoon">
+						<img src="images/Computer_Logins.png" />
+						<h3>Apple ID</h3>
+						<h6>My Login Information for my Apple ID</h6>
+						<p>Added 7 hours ago</p>			
+					</a>
+				</li>
+					</ul>
+				<ul data-role="listview">	
+					<li>
+					<a href="#comingsoon">
+						<img src="images/Financial.png" />
+						<h3>TurboTax info.</h3>
+						<h6>My Login Information for my tax returns</h6>
+						<p>Added 1 day ago</p>
+					</a>
+				</li>
+					</ul>
+				<ul data-role="listview">
+					<li>
+					<a href="#comingsoon">
+						<img src="images/Online_Shopping.png" />
+						<h3>Ebay Account</h3>
+						<h6>My Login Information for my Ebay account</h6>
+						<p>Added 2 days ago</p>
+					</a>
+				</li></ul>
+				<ul data-role="listview">
+					<li>
+					<a href="#comingsoon">
+						<img src="images/Personal.png" />
+						<h3>Personal Data</h3>
+						<h6>My Personal Information.</h6>
+						<p>Added 5 days ago</p>
+					</a>
+				</li></ul>
+					<ul data-role="listview">
+					<li>
+					<a href="#comingsoon">
+						<img src="images/Other.png" />
+						<h3>Other information</h3>
+						<h6>My other information.</h6>
+						<p>Added 9 days ago</p>
+					</a>
+				</li>
+				</ul>	
+			</div>
+		</div>
+		
+		<div data-role="footer" data-theme="b" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+							<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+							<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+							<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+						</ul>
+					</div>
+				</div>	
+
+<!------------------Form Page----------------------!>
+
+		<div data-role="page" id="addItem" data-theme="b">
+			<img src="images/Brandinglogo.png" width="215" height="30" />	
+		<div data-role="header" data-theme="b">
+			<p>Add a Login Entry</p>	
+			
+			</div>
+			
+			<div data-role="content">
+			
+				
+				<a href="#js/json.js" data-role="button" id="displayLink" data-ajax="false" data-theme="b">Display Stored Data</a>
+				<br>
+				<a href="#" data-role="button" id="clear" data-theme="c">Clear Stored Data</a>
+				<br>
+				<br>
+				
+				<form action="" method="post" id="entryform">
+					<span>* fields are required.</span>
+					<div data-role="fieldcontain">
+						<label for="groups">*Select A Category:</label>
+						<br>
+						<br>
+						<select name="groups" data-theme="b" data-native-menu="false" class="required">
+							<option data-placeholder="true" value>Select A Category</option>
+								<option value="cpulogins">Computer Logins</option>
+								<option value="email">Email</option>
+								<option value="financial">Finacial</option>
+								<option value="onlineshopping">Online Shopping</option>
+								<option value="personal">Personal</option>
+								<option value="other">Other</option>
+							</optgroup>
+						</select>
+					<br>
+					</div>
+					
+					<div data-role="fieldcontain" data-transition="pop" >
+						<label for="title">*Title:</label>
+						<input type="text" name="title" id="title" class="required"/>
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="login">Login:</label>
+						<input type="text" name="login" id="login" />
+					</div>
+					
+					<div data-role="fieldcontain" >
+						<label for="pword">*Password:</label>
+						<input type="text" name="pword" id="pword" class="required"/>
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="cpword">*Confirm Password:</label>
+						<input type="text" name="cpword" id="cpword" class="required"/>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="Usage">How often I use this login info:</label><input type="range" min="1" max="3" value="2" id="usage2" /><small>&#40;1 &#61; rarely, 2 &#61; sometimes, 3 &#61; often.&#41;</small></li>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<legend>Date Last Modified:</legend>	
+		
+					<input name="mydate" id="mydate" value="3/23/2012" type="date" data-role="datebox"
+					   data-options='{"mode": "flipbox"}'>
+
+
+					</div>
+				
+	
+					<div data-role="fieldcontain">
+						<legend>Sort By: </legend>
+						<fieldset data-role="controlgroup" class="required">
+							<input type="radio" value="Category" name="sort" id="category" />
+							<label for="category">Category</label>
+							<input type="radio" value="Category" name="sort" id="title1" />
+							<label for="title1">Title</label>
+							<input type="radio" value="Category" name="sort" id="usage1" />
+							<label for="usage1">Usage</label>
+							<input type="radio" value="Category" name="sort" id="dateAdded" />
+							<label for="dateAdded">Date Added</label>
+						</fieldset>					
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="notes">Notes:</label>
+						<textarea id="notes"></textarea><input type="hidden" value="true" />
+					</div>
+			<div data-role="fieldcontain">
+				<br>
+				<input type="submit" value="Add Entry" id="submit" data-theme="b" />
+				<br>
+				<script>
+				function formReset()
+				{
+				document.getElementById("entryform").reset();
+				}
+				</script>
+				<input type="button" value="Reset Form" onclick="formReset()" data-theme="c" />
+				
+			</div>
+		</form>
+			</div>
+				<div data-role="footer" data-theme="b" >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+					<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
+					<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+						
+		</div>
+					
+	<!-- JavaScript under here -->
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+	
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>	
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script> 
+	<script src="js/json.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+
+
+</body>
+</html>

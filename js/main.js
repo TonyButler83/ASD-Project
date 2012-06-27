@@ -57,42 +57,37 @@ $(document).on("mobileinit", function(){
     $.mobile.ajaxLinksEnabled=false;
 });
 
+// STORE FUNCTION
+$('#submit').on('click', function storeData(key) {
 
+    if(validateForm()) {
 
-
-    function getSelectedRadio(){
-        var radios = document.forms[0].sort;
-        for(var i=0; i<radios.length; i++){
-            if(radios[i].checked){
-                sortValue = radios[i].value;
-            }
-        }
-    }
-
-    function storeData(key){
-        if(!key){
-            var id				= Math.floor(Math.random()*1000000001);
+        if(!key) {
+            var id = Math.floor(Math.random()*10000001);
         }else{
-            id = key;
+            var id = key;
         }
 
-        getSelectedRadio();
-
-        var item			= {};
-        item.group		= ["Category:", $('groups').value];
-        item.title		= ["Title:", $('title').value];
-        item.login		= ["Login:", $('login').value];
-        item.pword		= ["Password:", $('pword').value];
-        item.cpword		= ["Confirm Password:", $('cpword').value];
+        // Gather up all form values and labels.
+        //Find the value of the selected radio button.
+        var item	    = {};
+        item.group		= ["Category:", $('groups').val()];
+        item.title		= ["Title:", $('title').val()];
+        item.login		= ["Login:", $('login').val()];
+        item.pword		= ["Password:", $('pword').val()];
+        item.cpword		= ["Confirm Password:", $('cpword').val()];
         item.sort		= ["Sort By:", sortValue];
         item.usage		= ["Usage:", $('usage2').value];
-        item.date		= ["Date Modified:", $('dateModified').value];
-        item.notes		= ["Notes:", $('notes').value];
+        item.date		= ["Date Modified:", $('dateModified').val()];
+        item.notes		= ["Notes:", $('notes').val()];
 
-        localStorage.setItem(id, JSON.stringify(item));
-        alert("Entry Saved!");
+        //Save data into local storage
+        localStorage.setItem(id, JSON.stringify(newItem));
+        alert("Your entry has been saved!");
+
     }
 
+});
 
 
 //Auto Fill Local Storage from Json file.

@@ -6,7 +6,7 @@
 	
 	<title>Login & Password Saver</title>
 	
-	<!--  Mobile viewport optimized: j.mp/bplateviewport --!>
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -314,89 +314,6 @@
 		</ul>
 		</div>
     </div>
-	
-	
-	
-	
-	<div data-role="page" id="news">
-			<img src="images/Brandinglogo.png" width="215" height="30" />	
-			<div data-role="header" data-theme="b" >
-				<h2>News Stream</h2>
-			</div>
-	
-			<div data-role="content">
-				<ul data-role="listview">
-					<li>
-						<a href="#comingsoon">
-							<img src="images/Email.png" />
-							<h3>Gmail Account</h3>
-							<h6>My Login Information for my Gmail account.</h6>
-							<p>Added 2 hours ago</p>
-					</a>
-				</li>
-					</ul>
-				<ul data-role="listview">
-					<li>
-					<a href="#comingsoon">
-						<img src="images/Computer_Logins.png" />
-						<h3>Apple ID</h3>
-						<h6>My Login Information for my Apple ID</h6>
-						<p>Added 7 hours ago</p>			
-					</a>
-				</li>
-					</ul>
-				<ul data-role="listview">	
-					<li>
-					<a href="#comingsoon">
-						<img src="images/Financial.png" />
-						<h3>TurboTax info.</h3>
-						<h6>My Login Information for my tax returns</h6>
-						<p>Added 1 day ago</p>
-					</a>
-				</li>
-					</ul>
-				<ul data-role="listview">
-					<li>
-					<a href="#comingsoon">
-						<img src="images/Online_Shopping.png" />
-						<h3>Ebay Account</h3>
-						<h6>My Login Information for my Ebay account</h6>
-						<p>Added 2 days ago</p>
-					</a>
-				</li></ul>
-				<ul data-role="listview">
-					<li>
-					<a href="#comingsoon">
-						<img src="images/Personal.png" />
-						<h3>Personal Data</h3>
-						<h6>My Personal Information.</h6>
-						<p>Added 5 days ago</p>
-					</a>
-				</li></ul>
-					<ul data-role="listview">
-					<li>
-					<a href="#comingsoon">
-						<img src="images/Other.png" />
-						<h3>Other information</h3>
-						<h6>My other information.</h6>
-						<p>Added 9 days ago</p>
-					</a>
-				</li>
-				</ul>	
-			</div>
-		</div>
-		
-		<div data-role="footer" data-theme="b" data-position="fixed">
-					<div data-role="navbar">
-						<ul>
-							<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-							<li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
-							<li><a href="../appB/indexB.html" data-icon="grid" class="ui-btn-active">App B</a></li>
-							<li><a href="https://github.com/TonyButler83/Miu-Project4" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
-						</ul>
-					</div>
-				</div>	
-
 
 
 		<div data-role="page" id="addItem" data-theme="b">
@@ -461,7 +378,7 @@
 					<div data-role="fieldcontain">
 						<legend>Date Last Modified:</legend>	
 		
-					<input name="mydate" id="mydate" value="3/23/2012" type="date" data-role="datebox"
+					<input name="myDate" id="myDate" type="date" data-role="datebox"
 					   data-options='{"mode": "flipbox"}'>
 
 
@@ -486,16 +403,11 @@
 						<label for="notes">Notes:</label>
 						<textarea id="notes"></textarea><input type="hidden" value="true" />
 					</div>
-			<div data-role="fieldcontain">
+			<div data-role="fieldcontain" id="submit-container">
 				<br>
 				<input type="submit" value="Add Entry" id="submit" data-theme="b" />
 				<br>
-				<script>
-				function formReset()
-				{
-				document.getElementById("entryform").reset();
-				}
-				</script>
+
 				<input type="button" value="Reset Form" onclick="formReset()" data-theme="c" />
 				
 			</div>
@@ -516,10 +428,8 @@
 					
 	<!-- JavaScript under here -->
 	
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
-	
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>	
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script> 

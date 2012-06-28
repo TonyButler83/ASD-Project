@@ -71,92 +71,94 @@ $('#submit').on('click', function storeData(key) {
         // Gather up all form values and labels.
         //Find the value of the selected radio button.
         var item	    = {};
-        item.group		= ["Category:", $('groups').val()];
-        item.title		= ["Title:", $('title').val()];
-        item.login		= ["Login:", $('login').val()];
-        item.pword		= ["Password:", $('pword').val()];
-        item.cpword		= ["Confirm Password:", $('cpword').val()];
-        item.sort		= ["Sort By:", sortValue];
-        item.usage		= ["Usage:", $('usage2').value];
-        item.date		= ["Date Modified:", $('dateModified').val()];
-        item.notes		= ["Notes:", $('notes').val()];
+        item.group		= ["Category:", $('#groups').val()];
+        item.title		= ["Title:", $('#title').val()];
+        item.login		= ["Login:", $('#login').val()];
+        item.pword		= ["Password:", $('#pword').val()];
+        item.cpword		= ["Confirm Password:", $('#cpword').val()];
+        item.sort		= ["Sort By:", $('#sort').val()];
+        item.usage		= ["Usage:", $('#usage2').val()];
+        item.date		= ["Date Modified:", $('#dateModified').val()];
+        item.notes		= ["Notes:", $('#notes').val()];
 
         //Save data into local storage
         localStorage.setItem(id, JSON.stringify(newItem));
         alert("Your entry has been saved!");
 
     }
-
 });
 
 
-//Auto Fill Local Storage from Json file.
-    function autoFillData(){
-        for(var n in json){
-            var id = Math.floor(Math.random()*1000000001);
-            localStorage.setItem(id, JSON.stringify(json[n]));
-        }
+// VALIDATE FUNCTION
+var validateForm = function (entryId) {
+    var getGroup = $("#groups").val();
+    var getTitle = $("#title").val();
+    var getPword = $("#pword").val();
+    var getCpword = $("#cpword").val();
+    var formErrors = $('#formErrors');
+
+    //Reset error messages
+    $(".error").hide();
+    var hasError = false;
+    $('#errors').empty();
+    $('#groups > div').css("border", "none") ;
+    $('#title').css("border", "none") ;
+    $('#pword').css("border", "none") ;
+    $('#cpword').css("border", "none") ;
+
+
+    //Get Error messages
+    var messageArray = [];
+    //Select Category validation
+    if (getGroup === "--Select A Category--") {
+        $('#groups').after('<span class="error">Please select a category.</span>');
+        $('#groups').css("border", "1px solid red") ;
+        hasError = true;
+    }
+    //Title validation
+    if (getTitle === "") {
+        $('#title').after('<span class="error">Please enter a title.</span>');
+        $('#title').css("border", "1px solid red") ;
+        hasError = true;
+    }
+    //Password validation
+    if (getPword === "") {
+        $('#pword').after('<span class="error">Please enter a password.</span>');
+        $('#pword').css("border", "1px solid red") ;
+        hasError = true;
     }
 
-    function makeItemLinks(key, linksLi){
-        var editLink = document.createElement('a');
-        editLink.href = "#";
-        editLink.key = key;
-        var editText = "Edit Entry";
-        editLink.addEventListener("click", editItem);
-        editLink.innerHTML = editText;
-        linksLi.appendChild(editLink);
-
-        var breakTag = document.createElement('br');
-        linksLi.appendChild(breakTag);
-
-        var deleteLink = document.createElement('a');
-        deleteLink.href = "#";
-        deleteLink.key = key;
-        var deleteText = "Delete Entry";
-        deleteLink.addEventListener("click", deleteItem);
-        deleteLink.innerHTML = deleteText;
-        linksLi.appendChild(deleteLink);
+    //Confirm password validation
+    if (getCpword === "") {
+        $('#cpword').after('<span class="error">Please enter a password.</span>');
+        $('#cpword').css("border", "1px solid red") ;
+        hasError = true;
     }
 
-    function editItem(){
-        //Grab the data from our item from Local Storage.
-        var value = localStorage.getItem(this.key);
-        var item = JSON.parse(value);
-
-        //Show the form
-        toggleControls("off");
-
-//Populate the form fields with current localStorage values.
-        $('groups').value = item.group[1];
-        $('title').value = item.title[1];
-        $('login').value = item.login[1];
-        $('pword').value = item.pword[1];
-        $('cpword').value = item.cpword[1];
-        var radios = document.forms[0].sort;
-        for(var i=0; i<radios.length; i++){
-            if(radios[i].value == "Category" && item.sort[1] == "Category"){
-                radios[i].setAttribute("checked", "checked");
-            }else if(radios[i].value == "Title" && item.sort[1] == "Title"){
-                radios[i].setAttribute("checked", "checked");
-            }else if(radios[i].value == "Usage" && item.sort[1] == "Usage"){
-                radios[i].setAttribute("checked", "checked");
-            }else if(radios[i].value == "Date Added" && item.sort[1] == "Date Added"){
-                radios[i].setAttribute("checked", "checked");
-            }
-        }
-        $('usage2').value = item.usage[1];
-        $('dateModified').value = item.date[1];
-        $('notes').value = item.notes[1];
-
-        save.removeEventListener("click", storeData);
-        $('submit').value = "Edit Entry";
-        var editSubmit = $('submit');
-//Save the key value establised in this function as a property of the editSubmit event
-//so we can use that value when we save the data we edited.
-        editSubmit.addEventListener("click", validate);
-        editSubmit.key = this.key;
+    //Set Errors
+    if (hasError === true) {
+        $('#submit-container').after('<span class="error">Please correct the errors above.</span>');
+        event.preventDefault();
+        return false;
+    } else {
+        //If all is validated, save the data and send the key value from editData
+        storeData(entryId);
     }
+}
+
+
+//  Set default date
+function setDate() {
+    if (!($('#myDate').val()) ) {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1;//January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10) {dd='0'+dd;}
+        if(mm<10) {mm='0'+mm;}
+        $('#myDate').val(mm+'/'+dd+'/'+yyyy);
+    }
+}
 
     function deleteItem(){
         var ask = confirm("Are you sure you want to delete this entry?");
@@ -253,3 +255,4 @@ $('#submit').on('click', function storeData(key) {
 
 
 });
+

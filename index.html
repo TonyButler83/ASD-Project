@@ -311,9 +311,9 @@
 		<li data-role="list-divider">Notes:</li>
 			<li><h6>miu project 3</h6></li>
 			
-			</div>
+		</ul>
 		</div>
-	
+    </div>
 	
 	
 	
@@ -397,7 +397,7 @@
 					</div>
 				</div>	
 
-<!------------------Form Page----------------------!>
+
 
 		<div data-role="page" id="addItem" data-theme="b">
 			<img src="images/Brandinglogo.png" width="215" height="30" />	
@@ -418,10 +418,10 @@
 				<form action="" method="post" id="entryform">
 					<span>* fields are required.</span>
 					<div data-role="fieldcontain">
-						<label for="groups">*Select A Category:</label>
+						<label>*Select A Category:</label>
 						<br>
 						<br>
-						<select name="groups" data-theme="b" data-native-menu="false" class="required">
+						<select name="groups" id="groups" data-theme="b" data-native-menu="false" class="required">
 							<option data-placeholder="true" value>Select A Category</option>
 								<option value="cpulogins">Computer Logins</option>
 								<option value="email">Email</option>
@@ -455,7 +455,7 @@
 					</div>
 					
 					<div data-role="fieldcontain">
-						<label for="Usage">How often I use this login info:</label><input type="range" min="1" max="3" value="2" id="usage2" /><small>&#40;1 &#61; rarely, 2 &#61; sometimes, 3 &#61; often.&#41;</small></li>
+						<label for="Usage1">How often I use this login info:</label><input type="range" min="1" max="3" value="2" id="usage2" /><small>&#40;1 &#61; rarely, 2 &#61; sometimes, 3 &#61; often.&#41;</small></li>
 					</div>
 					
 					<div data-role="fieldcontain">

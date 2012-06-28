@@ -1,55 +1,8 @@
 /*
-Miu Project 4
+ASD Project 1
 by: Tony Butler
-date: 3/22/2012
-term: 1203
-*/
-/*
-var parseEForm = function(data){
-	console.log(data)
-};
-
-$(document).ready(function(){
-
-
-   var eform =$('#entryform');
-   
-   eform.validate({
-		invalidHandler: function(form, validator){},
-		submitHandler: function(){
-			var data = eform.serializeArray();
-			parseEForm(data);
-			localStorage.setItem("formdata", data);
-{
-        alert( "Your entry has been saved!" );
-    }
-}
-
-	});
-});
-
-window.addEventListener("DOMContentLoaded", function(){
-
-function fn(x){
-		var theElement = document.getElementById(x);
-		return theElement;
-	}
-
-function clearLocal(){
-	if(localStorage.length === 0){
-		alert("There is no data to clear.")
-	}else{
-		localStorage.clear();
-		alert("All password entries have been deleted!");
-		window.location.reload();
-		return false;
-	}
-}
-
-var clearLink = fn('clear');
-clearLink.addEventListener("click", clearLocal);
-
-});
+date: 6/28/2012
+term: 1207
 */
 
 
@@ -57,9 +10,27 @@ $(document).on("mobileinit", function(){
     $.mobile.ajaxLinksEnabled=false;
 });
 
-// STORE FUNCTION
-$('#submit').on('click', function storeData(key) {
 
+
+// STORE DATA FUNCTION
+var parseEForm = function(data){
+    console.log(data)
+};
+var eform =$('#entryForm');
+
+eform.validate({
+    invalidHandler: function(form, validator){},
+    submitHandler: function(){
+        var data = eform.serializeArray();
+        parseEForm(data);
+        localStorage.setItem("formdata", data);
+        {
+            alert( "Your entry has been saved!" );
+        }
+    }
+});
+$('#submit').on('click', function storeData(key) {
+//function storeData(){
     if(validateForm()) {
 
         if(!key) {
@@ -82,16 +53,14 @@ $('#submit').on('click', function storeData(key) {
         item.notes		= ["Notes:", $('#notes').val()];
 
         //Save data into local storage
-        localStorage.setItem(id, JSON.stringify(newItem));
-        alert("Your entry has been saved!");
-
+        localStorage.setItem(id, JSON.stringify(item));
     }
 });
 
 
 // VALIDATE FUNCTION
 var validateForm = function (entryId) {
-    var getGroup = $("#groups").val();
+    var getGroup = $("#select").val();
     var getTitle = $("#title").val();
     var getPword = $("#pword").val();
     var getCpword = $("#cpword").val();
@@ -101,7 +70,7 @@ var validateForm = function (entryId) {
     $(".error").hide();
     var hasError = false;
     $('#errors').empty();
-    $('#groups > div').css("border", "none") ;
+    $('#select > div').css("border", "none") ;
     $('#title').css("border", "none") ;
     $('#pword').css("border", "none") ;
     $('#cpword').css("border", "none") ;
@@ -110,9 +79,10 @@ var validateForm = function (entryId) {
     //Get Error messages
     var messageArray = [];
     //Select Category validation
-    if (getGroup === "--Select A Category--") {
-        $('#groups').after('<span class="error">Please select a category.</span>');
-        $('#groups').css("border", "1px solid red") ;
+    if (getGroup === "Select A Category") {
+        $('#select > div').after('<span class="error">Please select a category.</span>');
+        var groupsError = "Please select a category";
+        $('#select > div').css("border", "1px solid red") ;
         hasError = true;
     }
     //Title validation
@@ -130,7 +100,7 @@ var validateForm = function (entryId) {
 
     //Confirm password validation
     if (getCpword === "") {
-        $('#cpword').after('<span class="error">Please enter a password.</span>');
+        $('#cpword').after('<span class="error">Please confirm your password.</span>');
         $('#cpword').css("border", "1px solid red") ;
         hasError = true;
     }
@@ -143,8 +113,13 @@ var validateForm = function (entryId) {
     } else {
         //If all is validated, save the data and send the key value from editData
         storeData(entryId);
+
     }
 }
+
+$('#entryForm').submit(function () {
+    validateForm(entryId);
+});
 
 
 //  Set default date
@@ -158,101 +133,25 @@ function setDate() {
         if(mm<10) {mm='0'+mm;}
         $('#myDate').val(mm+'/'+dd+'/'+yyyy);
     }
-}
+};
 
-    function deleteItem(){
-        var ask = confirm("Are you sure you want to delete this entry?");
-        if(ask){
-            localStorage.removeItem(this.key);
-            alert("Entry is deleted!");
-            window.location.reload();
-        }else{
-            alert("Entry was NOT deleted.")
-        }
-    }
+ var input = $("input:reset")
 
-    function clearLocal(){
-        if(localStorage.length === 0){
-            alert("There is no data to clear.")
-        }else{
+
+// CLEAR ALL FUNCTION
+$("#clear").on('click', function () {
+    if (localStorage.length === 0) {
+        alert("There is no data to clear.");
+    } else {
+        var ask = confirm("Are you sure you want to delete all entries?");
+        if (ask) {
             localStorage.clear();
-            alert("All password entries have been deleted!");
-            window.location.reload();
+            alert("All entries have been deleted.");
+            window.location.href = "index.html";
             return false;
+        } else {
+            alert("All entries were NOT deleted.");
         }
     }
-
-    function validate(e){
-        var getGroup = $('groups');
-        var getTitle = $('title');
-        var getPword = $('pword');
-        var getCpword = $('cpword');
-
-
-//Reset Error Messages
-        errMsg.innerHTML = "";
-        getGroup.style.border = "1px solid black";
-        getTitle.style.border = "1px solid black";
-        getPword.style.border = "1px solid black";
-        getCpword.style.border = "1px solid black";
-
-        var messageAry = [];
-//Category validation
-        if(getGroup.value ==="--Select Category--"){
-            var groupError = "Please select a category.";
-            getGroup.style.border = "1px solid red";
-            messageAry.push(groupError);
-        }
-//Title validation
-        if(getTitle.value === ""){
-            var titleError = "Please enter a title."
-            getTitle.style.border = "1px solid red";
-            messageAry.push(titleError);
-        }
-//Password validation
-        if(getPword.value === ""){
-            var pwordError = "Please enter a password."
-            getPword.style.border = "1px solid red";
-            messageAry.push(pwordError);
-        }
-//Confirm Password validation
-        if(getCpword.value === ""){
-            var cpwordError = "Please retype your password for confirmation."
-            getCpword.style.border = "1px solid red";
-            messageAry.push(cpwordError);
-
-        }
-
-////Displays messages on screen
-        if(messageAry.length >= 1){
-            for(var i=0, j=messageAry.length; i < j; i++){
-                var txt = document.createElement('li');
-                txt.innerHTML = messageAry[i];
-                errMsg.appendChild(txt);
-            }
-            e.preventDefault();
-            return false;
-        }else{
-
-            storeData(this.key);
-        }
-    }
-
-
-    var entryGroups = ["--Select Category--", "Computer_Logins", "Email", "Financial", "Online_Shopping", "Personal", "Other"],
-        sortValue,
-        errMsg = $('errors');
-    ;
-
-    var displayLink = $('displayLink');
-    displayLink.addEventListener("click", getData);
-    var clearLink = $('clear');
-    clearLink.addEventListener("click", clearLocal);
-    var save = $('submit');
-    save.addEventListener("click", validate);
-    getPword.addEventListener("blur", checkPword);
-    check.addEventListener("click", comparePwords);
-
-
 });
 

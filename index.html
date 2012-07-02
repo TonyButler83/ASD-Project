@@ -39,18 +39,22 @@
 </style>
 
 		<div data-role="content">
-			
+
 			
 				<a href= "#addItem"><img src="images/lock1.png" alt="Password Icon" width="190" height="190" /></a> 
 			<br>
 			<br>
+            <ul data-role="listview"
+                data-theme="b"
+                id="dataList">
             <a href="#" data-role="button" id="displayLink1"  data-theme="b">Computer Logins (JSON)</a>
             <a href="#" data-role="button" id="displayLink2"  data-theme="b">Email Accounts (XML)</a>
             <a href="#" data-role="button" id="displayLink3"  data-theme="b">Financial Information (CSV)</a>
             <a href="#" data-role="button" id="displayLink4"  data-theme="b">Online Shopping</a>
             <a href="#" data-role="button" id="displayLink5"  data-theme="b">Personal Information</a>
             <a href="#" data-role="button" id="displayLink6"  data-theme="b">Other</a>
-            <br>
+                </ul>
+                <br>
             <h4>Copyright &copy; Tony Butler</h4>
             <!-----------<ul data-role="listview" data-inset="true" data-theme="b" data-filter="true">
 				<li><a href="#cpulogins">Computer Logins</a></li>
@@ -183,6 +187,7 @@
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script> 
 	<script src="js/json.js" type="text/javascript"></script>
 	<script src="js/main.js" type="text/javascript"></script>
+    <script src="js/ajax.js" type="text/javascript"></script>
 
 
 </body>

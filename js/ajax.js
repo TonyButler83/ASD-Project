@@ -23,8 +23,9 @@ $('#home').live('pageinit', function () {
                 }
             }
         });
-
+        $('#removeList').remove();
         $('#dataList').listview('refresh');
     });
+
 });
 

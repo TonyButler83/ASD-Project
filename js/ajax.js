@@ -53,5 +53,31 @@ $('#home').live('pageinit', function () {
             }
         })
     })
+
+    $('#displayLink3').on("click", function(){
+        $.ajax({
+            url: 'xhr/main.csv',
+            type: 'GET',
+            dataType: 'text',
+            success: function(csv){
+                console.log(csv);
+                var items = csv.split("\n");
+                for(var j=1; j< items.length; j++){
+                    var row = items[j];
+                    var columns = row.split(",");
+
+                    console.log(columns);
+                    $('#displayLink3').after(''+
+                        '<li class="ui-li ui-li-static ui body-a">' +
+                        '<p>'+ columns[1] +'</p><p>'+
+                        'Category: ' + columns[0] +
+                        '&nbsp;&nbsp; Login: ' + columns[2] +
+                        '&nbsp;&nbsp; Password: ' + columns[3] +
+                        '</p></li>');
+                }
+            }
+        });
+    });
 });
+
 

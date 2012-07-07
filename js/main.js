@@ -13,7 +13,7 @@ $(document).on("mobileinit", function(){
 
 
 // STORE DATA FUNCTION
-var parseEForm = function(data){
+/*var parseEForm = function(data){
     console.log(data)
 };
 var eform =$('#entryForm');
@@ -28,34 +28,7 @@ eform.validate({
             alert( "Your entry has been saved!" );
         }
     }
-});
-$('#submit').on('click', function storeData(key) {
-//function storeData(){
-    if(validateForm()) {
-
-        if(!key) {
-            var id = Math.floor(Math.random()*10000001);
-        }else{
-            var id = key;
-        }
-
-        // Gather up all form values and labels.
-        //Find the value of the selected radio button.
-        var item	    = {};
-        item.group		= ["Category:", $('#groups').val()];
-        item.title		= ["Title:", $('#title').val()];
-        item.login		= ["Login:", $('#login').val()];
-        item.pword		= ["Password:", $('#pword').val()];
-        item.cpword		= ["Confirm Password:", $('#cpword').val()];
-        item.sort		= ["Sort By:", $('#sort').val()];
-        item.usage		= ["Usage:", $('#usage2').val()];
-        item.date		= ["Date Modified:", $('#dateModified').val()];
-        item.notes		= ["Notes:", $('#notes').val()];
-
-        //Save data into local storage
-        localStorage.setItem(id, JSON.stringify(item));
-    }
-});
+});   */
 
 
 // VALIDATE FUNCTION
@@ -80,10 +53,10 @@ var validateForm = function (entryId) {
     var messageArray = [];
     //Select Category validation
     if (getGroup === "Select A Category") {
-        $('#select > div').after('<span class="error">Please select a category.</span>');
+        $('#select').after('<span class="error">Please select a category.</span>');
         var groupsError = "Please select a category";
-        $('#select > div').css("border", "1px solid red") ;
-        hasError = true;
+        $('#select').css("border", "1px solid red") ;
+        groupsError = true;
     }
     //Title validation
     if (getTitle === "") {
@@ -116,6 +89,37 @@ var validateForm = function (entryId) {
 
     }
 }
+
+$('#submit').on('click', function storeData(key) {
+//function storeData(){
+    if(validateForm()) {
+
+        if(!key) {
+            var id = Math.floor(Math.random()*10000001);
+        }else{
+            id = key;
+        }
+
+        // Gather up all form values and labels.
+        //Find the value of the selected radio button.
+        var newItem	    = {};
+        newItem.group		= ["Category:", $('#groups').val()];
+        newItem.title		= ["Title:", $('#title').val()];
+        newItem.login		= ["Login:", $('#login').val()];
+        newItem.pword		= ["Password:", $('#pword').val()];
+        newItem.cpword		= ["Confirm Password:", $('#cpword').val()];
+        newItem.sort		= ["Sort By:", $('#sort').val()];
+        newItem.usage		= ["Usage:", $('#usage2').val()];
+        newItem.date		= ["Date Modified:", $('#dateModified').val()];
+        newItem.notes		= ["Notes:", $('#notes').val()];
+
+        //Save data into local storage
+        localStorage.setItem(id, JSON.stringify(newitem));
+        alert("Your entry has been saved!");
+    }
+});
+
+
 
 $('#entryForm').submit(function () {
     validateForm(entryId);
@@ -153,5 +157,7 @@ $("#clear").on('click', function () {
             alert("All entries were NOT deleted.");
         }
     }
+
+
 });
 

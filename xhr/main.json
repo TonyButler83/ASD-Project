@@ -1,6 +1,6 @@
 {"entries":[
     {
-        "group": ["Category:", "Computer_Logins"],
+        "group": ["Category:", "Computer Login"],
         "title": ["Title:", "MacBook Pro login"],
         "login": ["Login:", "Tony's Mac"],
         "pword": ["Password:", "tbfso2"],
@@ -11,7 +11,7 @@
         "notes": ["Notes:", "ASD json test2"]
     },
     {
-        "group": ["Category:", "Computer_Logins"],
+        "group": ["Category:", "Computer Login"],
         "title": ["Title:", "Norton Anti Virus"],
         "login": ["Login:", "TonyButler"],
         "pword": ["Password:", "tbfso3"],
@@ -22,7 +22,7 @@
         "notes": ["Notes:", "ASD json test3"]
     },
     {
-        "group": ["Category:", "Computer_Logins"],
+        "group": ["Category:", "Computer Login"],
         "title": ["Title:", "Apple ID"],
         "login": ["Login:", "Tonyb@gmail.com"],
         "pword": ["Password:", "tbfso8"],
@@ -33,7 +33,7 @@
         "notes": ["Notes:", "ASD json test8"]
     },
     {
-        "group": ["Category:", "Computer_Logins"],
+        "group": ["Category:", "Computer Login"],
         "title": ["Title:", "Clean my mac login"],
         "login": ["Login:", "Tonyb83"],
         "pword": ["Password:", "tbfso9"],
@@ -44,7 +44,7 @@
         "notes": ["Notes:", "ASD json test9"]
     },
     {
-        "group": ["Category:", "Computer_Logins"],
+        "group": ["Category:", "Computer Login"],
         "title": ["Title:", "Mac Administration"],
         "login": ["Login:", ""],
         "pword": ["Password:", "tbfso10"],

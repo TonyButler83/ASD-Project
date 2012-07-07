@@ -27,5 +27,31 @@ $('#home').live('pageinit', function () {
         $('#dataList').listview('refresh');
     });
 
+    $('#displayLink2').on("click", function () {
+        $.ajax({
+            url:"xhr/main.xml",
+            type:'GET',
+            dataType:"xml",
+            success:function (xml) {
+                console.log(xml)
+                $(xml).find("item").each(function () {
+                    var xmlList = {};
+                    xmlList.title = $(this).find("title").text();
+                    xmlList.category = $(this).find("category").text();
+                    xmlList.login = $(this).find("login").text();
+                    xmlList.password = $(this).find("password").text();
+                    console.log(xmlList);
+
+                    $('#displayLink2').after('' +
+                        '<li class="ui-li ui-li-static ui body-a">' +
+                        '<h3>' + xmlList.title + '</h3>' +
+                        '<p>' + xmlList.category + '</p>' +
+                        '&nbsp;&nbsp;' + '<p>' + 'login: ' + xmlList.login + '</p>' +
+                        '&nbsp;&nbsp;' + '<p>' + 'password: ' + xmlList.password + '</p>' +
+                        '</li>');
+                });
+            }
+        })
+    })
 });
 

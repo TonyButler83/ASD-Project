@@ -24,7 +24,7 @@ $('#home').live('pageinit', function () {
             }
         });
         $('#removeList').remove();
-        $('#dataList').listview('refresh');
+        //$('#dataList').listview('refresh');
     });
 
     $('#displayLink2').on("click", function () {
@@ -69,11 +69,11 @@ $('#home').live('pageinit', function () {
                     console.log(columns);
                     $('#displayLink3').after(''+
                         '<li class="ui-li ui-li-static ui body-a">' +
-                        '<p>'+ columns[1] +'</p><p>'+
-                        'Category: ' + columns[0] +
-                        '&nbsp;&nbsp; Login: ' + columns[2] +
-                        '&nbsp;&nbsp; Password: ' + columns[3] +
-                        '</p></li>');
+                        '<h3>'+ columns[1] +'</h3>' +
+                        '<p>' + columns[0] +  '</p>' +
+                        '&nbsp;&nbsp;' + '<p>' + 'Login:'  + columns[2] + '</p>' +
+                        '&nbsp;&nbsp;' + '<p>' + 'Password:'  + columns[3] + '</p>' +
+                        '</li>');
                 }
             }
         });

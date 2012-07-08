@@ -13,7 +13,7 @@ $(document).on("mobileinit", function(){
 
 
 // STORE DATA FUNCTION
-/*var parseEForm = function(data){
+var parseEForm = function(data){
     console.log(data)
 };
 var eform =$('#entryForm');
@@ -28,7 +28,7 @@ eform.validate({
             alert( "Your entry has been saved!" );
         }
     }
-});   */
+});
 
 
 // VALIDATE FUNCTION
@@ -77,6 +77,15 @@ var validateForm = function (entryId) {
         $('#cpword').css("border", "1px solid red") ;
         hasError = true;
     }
+
+    //Confirm password match
+    if(getCpword!= getPword) {
+        $("#cpword").after('<span class="error">The passwords do not match.</span>');
+        $('#cpword').css("border", "1px solid red") ;
+        hasError = true;
+        //return false;
+    }
+
 
     //Set Errors
     if (hasError === true) {
@@ -157,7 +166,6 @@ $("#clear").on('click', function () {
             alert("All entries were NOT deleted.");
         }
     }
-
 
 });
 

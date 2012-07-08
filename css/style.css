@@ -43,7 +43,7 @@ label {
 	}
 	
 span {
-	font-style: italic;
+
 	}
 
 small {
@@ -82,5 +82,5 @@ button {
 	text-align:left;
 	font-size:16px;
 	white-space:nowrap; }  
-	
-label.error{display:block; margin:10px 0; color:#cc0000;}
+
+.error{display:block; margin:10px 0; color:#cc0000;}

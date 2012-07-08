@@ -1,8 +1,8 @@
 /*
-Miu Project 4
+ASD Project 1
 by: Tony Butler
-date: 3/22/2012
-term: 1203
+date: 6/27/2012
+term: 1207
 */
 
 
@@ -16,7 +16,7 @@ var json = {
 		"sort": ["Sort By:", "Usage"],
 		"usage": ["Usage:", "1"],
 		"date": ["Date Modified:", "2012-02-09"],
-		"notes": ["Notes:", "miu json test1"]
+		"notes": ["Notes:", "json test1"]
 	},
 	"passwordEntry2": {
 		"group": ["Category:", "Computer_Logins"],
@@ -27,7 +27,7 @@ var json = {
 		"sort": ["Sort By:", "Date Added"],
 		"usage": ["Usage:", "3"],
 		"date": ["Date Modified:", "2012-02-16"],
-		"notes": ["Notes:", "miu json test2"]
+		"notes": ["Notes:", "json test2"]
 	},
 	"passwordEntry3": {
 		"group": ["Category:", "Financial"],
@@ -38,7 +38,7 @@ var json = {
 		"sort": ["Sort By:", "Category"],
 		"usage": ["Usage:", "2"],
 		"date": ["Date Modified:", "2012-02-23"],
-		"notes": ["Notes:", "miu json test3"]
+		"notes": ["Notes:", "json test3"]
 	},
 	"passwordEntry4": {
 		"group": ["Category:", "Online_Shopping"],
@@ -49,7 +49,7 @@ var json = {
 		"sort": ["Sort By:", "Usage"],
 		"usage": ["Usage:", "1"],
 		"date": ["Date Modified:", "2012-02-18"],
-		"notes": ["Notes:", "miu json test4"]
+		"notes": ["Notes:", "json test4"]
 	},
 	"passwordEntry5": {
 		"group": ["Category:", "Other"],
@@ -60,7 +60,7 @@ var json = {
 		"sort": ["Sort By:", "Date Added"],
 		"usage": ["Usage:", "3"],
 		"date": ["Date Modified:", "2012-02-20"],
-		"notes": ["Notes:", "miu json test5"]
+		"notes": ["Notes:", "json test5"]
 	},
 	"passwordEntry6": {
 		"group": ["Category:", "Personal"],
@@ -71,7 +71,7 @@ var json = {
 		"sort": ["Sort By:", "Title"],
 		"usage": ["Usage:", "2"],
 		"date": ["Date Modified:", "2012-02-17"],
-		"notes": ["Notes:", "miu json test6"]
+		"notes": ["Notes:", "json test6"]
 	},
 	"passwordEntry7": {
 		"group": ["Category:", "Email"],
@@ -82,7 +82,7 @@ var json = {
 		"sort": ["Sort By:", "Usage"],
 		"usage": ["Usage:", "1"],
 		"date": ["Date Modified:", "2012-02-15"],
-		"notes": ["Notes:", "miu json test7"]
+		"notes": ["Notes:", "json test7"]
 	},
 	"passwordEntry8": {
 		"group": ["Category:", "Computer_Logins"],
@@ -93,7 +93,7 @@ var json = {
 		"sort": ["Sort By:", "Date Added"],
 		"usage": ["Usage:", "3"],
 		"date": ["Date Modified:", "2012-02-16"],
-		"notes": ["Notes:", "miu json test8"]
+		"notes": ["Notes:", "json test8"]
 	},
 	"passwordEntry9": {
 		"group": ["Category:", "Financial"],
@@ -104,7 +104,7 @@ var json = {
 		"sort": ["Sort By:", "Category"],
 		"usage": ["Usage:", "2"],
 		"date": ["Date Modified:", "2012-02-23"],
-		"notes": ["Notes:", "miu json test9"]
+		"notes": ["Notes:", "json test9"]
 	},
 	"passwordEntry10": {
 		"group": ["Category:", "Personal"],
@@ -115,7 +115,7 @@ var json = {
 		"sort": ["Sort By:", "Usage"],
 		"usage": ["Usage:", "1"],
 		"date": ["Date Modified:", "2012-02-18"],
-		"notes": ["Notes:", "miu json test10"]
+		"notes": ["Notes:", "json test10"]
 	},
 	"passwordEntry11": {
 		"group": ["Category:", "Other"],
@@ -126,7 +126,7 @@ var json = {
 		"sort": ["Sort By:", "Date Added"],
 		"usage": ["Usage:", "3"],
 		"date": ["Date Modified:", "2012-02-20"],
-		"notes": ["Notes:", "miu json test11"]
+		"notes": ["Notes:", "json test11"]
 	},
 	"passwordEntry12": {
 		"group": ["Category:", "Personal"],
@@ -137,7 +137,7 @@ var json = {
 		"sort": ["Sort By:", "Title"],
 		"usage": ["Usage:", "2"],
 		"date": ["Date Modified:", "2012-02-17"],
-		"notes": ["Notes:", "miu json test12"]
+		"notes": ["Notes:", "json test12"]
 	},
 	"passwordEntry13": {
 		"group": ["Category:", "Email"],
@@ -148,7 +148,7 @@ var json = {
 		"sort": ["Sort By:", "Usage"],
 		"usage": ["Usage:", "1"],
 		"date": ["Date Modified:", "2012-02-09"],
-		"notes": ["Notes:", "miu json test13"]
+		"notes": ["Notes:", "json test13"]
 	},
 	"passwordEntry14": {
 		"group": ["Category:", "Computer_Logins"],
@@ -159,7 +159,7 @@ var json = {
 		"sort": ["Sort By:", "Date Added"],
 		"usage": ["Usage:", "3"],
 		"date": ["Date Modified:", "2012-02-16"],
-		"notes": ["Notes:", "miu json test14"]
+		"notes": ["Notes:", "json test14"]
 	},
 	"passwordEntry15": {
 		"group": ["Category:", "Financial"],
@@ -170,7 +170,7 @@ var json = {
 		"sort": ["Sort By:", "Category"],
 		"usage": ["Usage:", "2"],
 		"date": ["Date Modified:", "2012-02-23"],
-		"notes": ["Notes:", "miu json test15 "]
+		"notes": ["Notes:", "json test15 "]
 	},
 	"passwordEntry16": {
 		"group": ["Category:", "Online_Shopping"],
@@ -181,7 +181,7 @@ var json = {
 		"sort": ["Sort By:", "Usage"],
 		"usage": ["Usage:", "1"],
 		"date": ["Date Modified:", "2012-02-18"],
-		"notes": ["Notes:", "miu json test16"]
+		"notes": ["Notes:", "json test16"]
 	},
 	"passwordEntry17": {
 		"group": ["Category:", "Other"],
@@ -192,7 +192,7 @@ var json = {
 		"sort": ["Sort By:", "Date Added"],
 		"usage": ["Usage:", "3"],
 		"date": ["Date Modified:", "2012-02-14"],
-		"notes": ["Notes:", "miu json test17"]
+		"notes": ["Notes:", "json test17"]
 	},
 	"passwordEntry18": {
 		"group": ["Category:", "Other"],
@@ -203,7 +203,7 @@ var json = {
 		"sort": ["Sort By:", "Title"],
 		"usage": ["Usage:", "2"],
 		"date": ["Date Modified:", "2012-02-17"],
-		"notes": ["Notes:", "miu json test18"]
+		"notes": ["Notes:", "json test18"]
 	},
 	"passwordEntry19": {
 		"group": ["Category:", "Personal"],
@@ -214,7 +214,7 @@ var json = {
 		"sort": ["Sort By:", "Date Added"],
 		"usage": ["Usage:", "3"],
 		"date": ["Date Modified:", "2012-02-08"],
-		"notes": ["Notes:", "miu json test19"]
+		"notes": ["Notes:", "json test19"]
 	},
 	"passwordEntry20": {
 		"group": ["Category:", "Personal"],
@@ -225,6 +225,6 @@ var json = {
 		"sort": ["Sort By:", "Title"],
 		"usage": ["Usage:", "2"],
 		"date": ["Date Modified:", "2012-02-11"],
-		"notes": ["Notes:", "miu json test20"]
+		"notes": ["Notes:", "json test20"]
 	}
 }

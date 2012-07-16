@@ -70,7 +70,6 @@ var validateForm = function (entryId) {
         $('#pword').css("border", "1px solid red") ;
         hasError = true;
     }
-
     //Confirm password validation
     if (getCpword === "") {
         $('#cpword').after('<span class="error">Please confirm your password.</span>');

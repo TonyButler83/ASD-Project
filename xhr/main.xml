@@ -3,23 +3,13 @@
 <items>
     <item>
         <category>Email account</category>
-        <title>Yahoo account</title>
-        <login>davidbutler@yahoo.com</login>
-        <password>tbxml1</password>
+        <title>Zoho account</title>
+        <login>tonyb83@zoho.com</login>
+        <password>tbxml5</password>
         <sort_by>Title</sort_by>
-        <usage>2</usage>
+        <usage>1</usage>
         <date_modified>2012-07-01</date_modified>
-        <notes>ASD xml entry1</notes>
-    </item>
-    <item>
-        <category>Email account</category>
-        <title>Gmail account</title>
-        <login>tonyb@gmail.com</login>
-        <password>tbxml2</password>
-        <sort_by>Date_Modified</sort_by>
-        <usage>3</usage>
-        <date_modified>2012-07-01</date_modified>
-        <notes>ASD xml entry2</notes>
+        <notes>ASD xml entry5</notes>
     </item>
     <item>
         <category>Email account</category>
@@ -43,12 +33,22 @@
     </item>
     <item>
         <category>Email account</category>
-        <title>Zoho account</title>
-        <login>tonyb83@zoho.com</login>
-        <password>tbxml5</password>
+        <title>Yahoo account</title>
+        <login>davidbutler@yahoo.com</login>
+        <password>tbxml1</password>
         <sort_by>Title</sort_by>
-        <usage>1</usage>
+        <usage>2</usage>
         <date_modified>2012-07-01</date_modified>
-        <notes>ASD xml entry5</notes>
+        <notes>ASD xml entry1</notes>
+    </item>
+    <item>
+        <category>Email account</category>
+        <title>Gmail account</title>
+        <login>tonyb@gmail.com</login>
+        <password>tbxml2</password>
+        <sort_by>Date_Modified</sort_by>
+        <usage>3</usage>
+        <date_modified>2012-07-01</date_modified>
+        <notes>ASD xml entry2</notes>
     </item>
 </items>

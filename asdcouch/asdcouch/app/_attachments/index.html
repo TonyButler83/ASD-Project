@@ -1,0 +1,290 @@
+	<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Login & Password Saver</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" />  
+
+    <link rel="stylesheet" href="css/style.css"/>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+
+</head>
+
+<body>
+
+	<div data-role="page"  id="home" >
+		
+		<img src="images/Brandinglogo.png" width="215" height="30" />
+			
+		<p>An application that stores all of your login and password information.</p>
+		
+<style>			
+  .ui-page {background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#FFC180));
+			}
+</style>
+
+		<div data-role="content">
+
+			
+				<a href= "#addItem"><img src="images/lock1.png" alt="Password Icon" width="190" height="190" /></a> 
+			<br>
+			<br>
+            <ul data-role="listview"
+                data-theme="b"
+                id="dataList" data-inset="true" data-filter="true">
+            <a href="#cpulogins" data-role="button" id="displayLink1"  data-theme="b">Computer Logins </a>
+            <a href="#email" data-role="button" id="displayLink2"  data-theme="b">Email Accounts </a>
+            <a href="#financial" data-role="button" id="displayLink3"  data-theme="b">Financial Information </a>
+            <a href="#onlineshopping" data-role="button" id="displayLink4"  data-theme="b">Online Shopping</a>
+            <a href="#personal" data-role="button" id="displayLink5"  data-theme="b">Personal Information</a>
+            <a href="#other" data-role="button" id="displayLink6"  data-theme="b">Other</a>
+                </ul>
+                <br>
+            <h4>Copyright &copy; Tony Butler</h4>
+
+		</div>
+	
+	</div>
+    <div data-role="page" id="cpulogins">
+        <img src="images/Brandinglogo.png" width="215" height="30" />
+        <div data-role="header" data-theme="b" >
+            <p>Computer Login Entries</p>
+        </div>
+
+        <div data-role="content">
+            <ul id="cpulist" data-role="listview">
+
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="email">
+        <img src="images/Brandinglogo.png" width="215" height="30" />
+        <div data-role="header" data-theme="b" >
+            <p>Email Accounts</p>
+        </div>
+
+        <div data-role="content">
+            <ul id="emailList" data-role="listview">
+
+
+            </ul>
+        </div>
+
+
+    </div>
+
+    <div data-role="page" id="financial">
+        <img src="images/Brandinglogo.png" width="215" height="30" />
+        <div data-role="header" data-theme="b" >
+            <p>Financial Information</p>
+        </div>
+
+        <div data-role="content">
+            <ul id="financialList" data-role="listview">
+
+
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+    <div data-role="page" id="onlineshopping">
+        <img src="images/Brandinglogo.png" width="215" height="30" />
+        <div data-role="header" data-theme="b" >
+            <p>Online Shopping</p>
+        </div>
+
+        <div data-role="content">
+            <ul id="shoppinglist" data-role="listview">
+
+            </ul>
+        </div>
+
+    </div>
+    <div data-role="page" id="personal">
+        <img src="images/Brandinglogo.png" width="215" height="30" />
+        <div data-role="header" data-theme="b" >
+            <p>Personal Data</p>
+        </div>
+
+        <div data-role="content">
+            <ul id="personalList" data-role="listview">
+
+
+            </ul>
+        </div>
+
+        <!-- <div data-role="footer" data-theme="b" data-position="fixed"> -->
+       <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+                <li><a href="#news" data-icon="info" class="ui-btn-active">News Stream</a></li>
+
+                <li><a href="https://github.com/TonyButler83/ASD-Project2" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+    </div>
+
+    <div data-role="page" id="other">
+        <img src="images/Brandinglogo.png" width="215" height="30" />
+        <div data-role="header" data-theme="b" >
+            <p>Other Information</p>
+        </div>
+
+        <div data-role="content">
+            <ul id="otherlist" data-role="listview">
+
+
+            </ul>
+        </div>
+    </div>
+
+
+    </div>
+
+  <!------------- Form Page -------------->
+
+		<div data-role="page" id="addItem" data-theme="b">
+			<img src="images/Brandinglogo.png" width="215" height="30" />	
+		<div data-role="header" data-theme="b">
+			<p>Add a Login Entry</p>	
+			
+			</div>
+			
+			<div data-role="content">
+
+				<a href="#" data-role="button" id="displayLink" data-ajax="false" data-theme="b">Display Stored Data</a>
+				<br>
+				<a href="#" data-role="button" id="clear" data-theme="c">Clear Stored Data</a>
+				<br>
+				<br>
+				
+				<form action="" method="post" id="entryForm">
+                    <span id="required"></span><span class="error"></span> <span>*fields are required.</span>
+					<div data-role="fieldcontain" id="select" >
+						<label for="select">Select A Category:*<span class="required"></span></label>
+						<br>
+						<br>
+						<select name="groups" id="groups" data-theme="b" data-native-menu="false" >
+							<option data-placeholder="true" value>Select A Category</option>
+								<option value="cpulogins">Computer Logins</option>
+								<option value="email">Email</option>
+								<option value="financial">Finacial</option>
+								<option value="onlineshopping">Online Shopping</option>
+								<option value="personal">Personal</option>
+								<option value="other">Other</option>
+							</optgroup>
+						</select>
+					<br>
+					</div>
+					
+					<div data-role="fieldcontain" data-transition="pop" >
+						<label for="title">Title:*</label>
+						<input type="text" placeholder="Enter a title for your entry" name="title" id="title" class="required"/>
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="login">Login:</label>
+						<input type="text" name="login" id="login" />
+					</div>
+					
+					<div data-role="fieldcontain" >
+						<label for="pword">Password:*</label>
+						<input type="text" placeholder="Enter a password" name="pword" id="pword" class="required"/>
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="cpword">Confirm Password:*</label>
+						<input type="text" placeholder="Retype your password" name="cpword" id="cpword" class="required"/>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="Usage1">How often I use this login info:</label><input type="range" min="1" max="3" value="2" id="usage2" /><small>&#40;1 &#61; rarely, 2 &#61; sometimes, 3 &#61; often.&#41;</small></li>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<legend>Date Last Modified:</legend>	
+		
+					<input name="myDate" id="myDate" type="date" data-role="datebox"
+					   data-options='{"mode": "flipbox"}'>
+
+					</div>
+
+					<div data-role="fieldcontain">
+						<legend>Sort By: </legend>
+						<fieldset data-role="controlgroup" class="required">
+							<input type="radio" value="Category" name="sort" id="category" />
+							<label for="category">Category</label>
+							<input type="radio" value="Category" name="sort" id="title1" />
+							<label for="title1">Title</label>
+							<input type="radio" value="Category" name="sort" id="usage1" />
+							<label for="usage1">Usage</label>
+							<input type="radio" value="Category" name="sort" id="dateAdded" />
+							<label for="dateAdded">Date Added</label>
+						</fieldset>					
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="notes">Notes:</label>
+						<textarea id="notes"></textarea><input type="hidden" value="true" />
+					</div>
+			<div data-role="fieldcontain" id="submit-container">
+				<br>
+				<input type="submit" value="Add Entry" id="submit" data-theme="b" />
+				<br>
+
+				<input type="reset" id="reset" value="Reset Form" onclick="formReset()" data-theme="c" />
+				
+			</div>
+		</form>
+			</div>
+				<div data-role="footer" data-theme="b" >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="https://github.com/TonyButler83/ASD-Project/tree/gh-pages" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+						
+		</div>
+
+	<!-- JavaScript under here -->
+
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="http://dev.jtsage.com/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/ajax.js" type="text/javascript"></script>
+    <script src="js/json.js" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

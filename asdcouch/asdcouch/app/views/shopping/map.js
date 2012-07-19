@@ -1,5 +1,5 @@
 function (doc) {
-	if (doc.group === "Online_Shopping"){
+	if (doc.group[1].substr(0,1) === "S"){
 		emit(doc.group,{
 			"category": doc.group,
 			"title": doc.title,

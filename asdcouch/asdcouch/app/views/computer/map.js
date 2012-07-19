@@ -1,6 +1,6 @@
 
 function (doc) {
-	if (doc._id === "Computer"){
+	if (doc.group[1].substr(0,1) === "C"){
 		emit(doc.group,{
 			"category": doc.group,
 			"title": doc.title,

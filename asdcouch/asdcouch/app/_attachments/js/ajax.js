@@ -3,6 +3,7 @@
  ASD Project 2
  1207
  */
+/*
 $('#home').live('pageinit', function () {
     $('#displayLink1').on("click", function () {
         $.ajax({
@@ -80,4 +81,4 @@ $('#home').live('pageinit', function () {
     });
 });
 
-
+*/

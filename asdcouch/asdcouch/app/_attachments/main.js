@@ -89,7 +89,7 @@ var validateForm = function (entryId) {
     //Set Errors
     if (hasError === true) {
         $('#submit-container').after('<span class="error">Please correct the errors above.</span>');
-        event.preventDefault();
+        //event.preventDefault();
         return false;
     } else {
         //If all is validated, save the data and send the key value from editData
@@ -130,7 +130,7 @@ $('#submit').on('click', function storeData(key) {
 
 
 $('#entryForm').submit(function () {
-    validateForm(entryId);
+    //validateForm(entryId);
 });
 
 

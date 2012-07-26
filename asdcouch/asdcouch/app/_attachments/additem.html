@@ -1,0 +1,126 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Login Password Saver</title>
+	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" /> 
+<title>Insert title here</title>
+</head>
+<body>
+
+		<div data-role="page" id="addItem" data-theme="b">
+			<img src="images/Brandinglogo.png" width="215" height="30" />	
+		<div data-role="header" data-theme="b">
+			<p>Add a Login Entry</p>	
+			
+			</div>
+			
+			<div data-role="content">
+
+				<a href="#" data-role="button" id="displayLink" data-ajax="false" data-theme="b">Display Stored Data</a>
+				<br>
+				<a href="#" data-role="button" id="clear" data-theme="c">Clear Stored Data</a>
+				<br>
+				<br>
+				
+				<form action="" method="post" id="entryForm">
+                    <span id="required"></span><span class="error"></span> <span>*fields are required.</span>
+					<div data-role="fieldcontain" id="select" >
+						<label for="select">Select A Category:*<span class="required"></span></label>
+						<br>
+						<br>
+						<select name="groups" id="groups" data-theme="b" data-native-menu="false" >
+							<option data-placeholder="true" value>Select A Category</option>
+								<option value="cpulogins">Computer Logins</option>
+								<option value="email">Email</option>
+								<option value="financial">Finacial</option>
+								<option value="onlineshopping">Online Shopping</option>
+								<option value="personal">Personal</option>
+								<option value="other">Other</option>
+							</optgroup>
+						</select>
+					<br>
+					</div>
+					
+					<div data-role="fieldcontain" data-transition="pop" >
+						<label for="title">Title:*</label>
+						<input type="text" placeholder="Enter a title for your entry" name="title" id="title" class="required"/>
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="login">Login:</label>
+						<input type="text" name="login" id="login" />
+					</div>
+					
+					<div data-role="fieldcontain" >
+						<label for="pword">Password:*</label>
+						<input type="text" placeholder="Enter a password" name="pword" id="pword" class="required"/>
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="cpword">Confirm Password:*</label>
+						<input type="text" placeholder="Retype your password" name="cpword" id="cpword" class="required"/>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="usage">How often I use this login info:</label><input type="range" min="1" max="3" value="2" id="usage" /><small>&#40;1 &#61; rarely, 2 &#61; sometimes, 3 &#61; often.&#41;</small></li>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<legend>Date Last Modified:</legend>	
+		
+					<input name="myDate" id="myDate" type="date" data-role="datebox"
+					   data-options='{"mode": "flipbox"}'>
+
+					</div>
+
+					<div data-role="fieldcontain" id="radio">
+						<legend>Sort By: </legend>					
+						<fieldset for="sort" data-role="controlgroup" class="required">
+							<input type="radio" value="Category" name="sort" id="sort1" />
+							<label for="sort1">Category</label>
+							<input type="radio" value="Title" name="sort" id="sort2" />
+							<label for="sort2">Title</label>
+							<input type="radio" value="Usage" name="sort" id="sort3" />
+							<label for="sort3">Usage</label>
+							<input type="radio" value="Date Added" name="sort" id="sort4" />
+							<label for="sort4">Date Added</label>
+						</fieldset>					
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="notes">Notes:</label>
+						<textarea id="notes"></textarea><input type="hidden" value="true" />
+					</div>
+                    <div data-role="fieldcontain" id="entryid-container">
+                        <label>Entry Id: </label>
+                        <input id="entry-id" type="text" disabled="disabled" >
+                    </div>
+                    <div data-role="fieldcontain" id="entryrev-container">
+                        <label>Revision Information: </label>
+                        <input id="entry-rev" type="text" disabled="disabled" >
+                    </div>
+			<div data-role="fieldcontain" id="submit-container">
+				<br>
+				<input type="submit" value="Add Entry" id="submit" data-theme="b" />
+				<br>
+
+				<input type="reset" id="reset" value="Reset Form" onclick="formReset()" data-theme="c" />
+				
+			</div>
+		</form>
+			</div>
+				<div data-role="footer" data-theme="b" >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="https://github.com/TonyButler83/ASD-Project/tree/gh-pages" data-icon="gear" class="ui-btn-active">GH-Pages</a></li>
+				</ul>
+			</div>
+		</div>
+						
+		</div>
+	<!-- JavaScript under here -->
+
+</body>
+</html>

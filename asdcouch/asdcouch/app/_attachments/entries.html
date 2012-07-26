@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+    <title>Entry List</title> 
+  </head>
+<body>
+	
+	<div data-role="page" id="entries" data-add-back-btn="true"  >
+   <div id="header" data-role="header"  data-position="fixed" data-theme="b">
+			<a href="#" data-rel="back" data-direction="reverse" data-icon="arrow-l" data-iconpos="notext">Back</a>
+			<a href="index.html" rel="external" data-iconpos="notext" data-icon="home" id="home-button">Home</a>
+		</div>
+	<br>
+	<br>
+    <div data-role="content" id="content" data-theme="b">
+        <ul id="entryList" data-role="listview" data-filter="true" data-theme="b"></ul>
+	</div>
+        <div >
+            <a href="additem.html"  id="addNew" data-icon="plus" data-role="button" data-theme="b"  rel="external">Add New Entry</a>
+        </div>
+     <div data-role="footer" data-theme="b" data-position="fixed">
+        <div data-role="navbar" id="navbar" data-theme="b">
+            <ul>
+                <li><a href="#" data-icon="delete" rel="external" id="clear" onclick="clear();">Clear All</a></li>
+            </ul>
+        </div>
+    </div> 
+</div>
+</body>
+</html>

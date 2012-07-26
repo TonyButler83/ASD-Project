@@ -13,8 +13,10 @@ $('#home').live("pageshow", function(){
 					$('#cpulist').append(
 						$('<li>').append(
 							$('<a>').attr("href", "#")
-								.text(title)		
-						)					
+                                .text(title)
+                            .text(login)
+                        .text(pword)
+					)
 					);				
 				});  
 				//$('#cpulist').listview('refresh');
@@ -39,7 +41,9 @@ $('#cpulogins').live("pageshow", function(){
 				$('#cpulist').append(
 					$('<li>').append(
 						$('<a>').attr("href", "#")
-							.text(title)
+                            .text(title)
+                            .text(login)
+                            .text(pword)
 							
 					)					
 				);				
@@ -64,7 +68,9 @@ $.ajax({
 			$('#emailList').append(
 				$('<li>').append(
 					$('<a>').attr("href", "#")
-						.text(title)
+                        .text(title)
+                        .text(login)
+                        .text(pword)
 				)					
 			);				
 		});
@@ -88,7 +94,9 @@ $.ajax({
 			$('#financialList').append(
 				$('<li>').append(
 					$('<a>').attr("href", "#")
-						.text(title)
+                        .text(title)
+                        .text(login)
+                        .text(pword)
 				)					
 			);				
 		});  
@@ -111,7 +119,9 @@ $.ajax({
 			$('#shoppinglist').append(
 				$('<li>').append(
 					$('<a>').attr("href", "#")
-						.text(title)
+                        .text(title)
+                    .text(login)
+                .text(pword)
 				)					
 			);				
 		});  
@@ -134,7 +144,9 @@ $.ajax({
 			$('#personalList').append(
 				$('<li>').append(
 					$('<a>').attr("href", "#")
-						.text(title)
+                        .text(title)
+                    .text(login)
+                .text(pword)
 				)					
 			);				
 		});  
@@ -158,6 +170,8 @@ $.ajax({
 				$('<li>').append(
 					$('<a>').attr("href", "#")
 						.text(title)
+						.text(login)
+						.text(pword)
 				)					
 			);				
 		});
